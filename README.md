@@ -1,7 +1,5 @@
 # FineDecor
 
-
-
 ## Description
 
 We wanted to try and create a furniture store with a new way to shop for furniture, mainly being able to search for furniture in non traditional ways. If you've ever ssearched for furniture before you'd know it can be difficult to find *exactly* what you want. What we were thinking was to add an option to filter by color and/or material to really get to what you want right away. Instead of the traditional way of going from outdoors -> tables -> checking all the table colors to find the right one. Instead you would just outdoors -> color/material making it much more intuitive to search.
@@ -48,3 +46,9 @@ Main contributors are:
 ## License
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+---
+
+## Initial Wireframe
+![Alt text](public/img/sgnin.png "Sign In")
+![Alt text](public/img/hmpg.png "Home Page")
+![Alt text](public/img/sort.png "Sort")
