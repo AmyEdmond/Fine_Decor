@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const Furniture = require('./Furniture');
 
 class User extends Model {
     checkPassword(loginPw) {
@@ -47,6 +48,10 @@ User.init({
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
+});
+
+User.hasMany(Furniture, {
+    foreignKey: 'user_id',
 });
 
 module.exports = User;
