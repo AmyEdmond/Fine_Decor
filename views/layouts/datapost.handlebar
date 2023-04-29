@@ -1,0 +1,31 @@
+{{#if loggedIn}}
+  <form id="furniture-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" class="form-input" required>
+    
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" class="form-input" required></textarea>
+    
+    <label for="price">Price:</label>
+    <input type="number" step="0.01" id="price" name="price" class="form-input" required>
+    
+    <label for="image">Image URL:</label>
+    <input type="url" id="image" name="image" class="form-input" required>
+    
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" class="form-input" required>
+    
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" name="brand" class="form-input" required>
+    
+    <label for="material">Material:</label>
+    <input type="text" id="material" name="material" class="form-input" required>
+    
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color" class="form-input" required>
+    
+    <button type="submit" id="submit" class="submit-btn">Submit</button>
+  </form>
+{{else}}
+  <p>Please log in to access this page.</p>
+{{/if}}
