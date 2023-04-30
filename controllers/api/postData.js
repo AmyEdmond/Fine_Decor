@@ -1,4 +1,3 @@
-// combinedRouter.js
 const express = require('express');
 const router = express.Router();
 const sequelize = require('./connection'); // Import the Sequelize instance
