@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Role } = require('../../models');
 
 router.post('/login', async (req,res) => {
     try {
@@ -38,6 +38,36 @@ router.post('/logout', (req, res) => {
         });
     } else {
         res.status(404).end();
+    }
+});
+
+router.post('/register', async (req, res) => {
+    try {
+        // check if user already exists with the same email address
+        const existingUser = await User.findOne({ where: { email: req.body.email } });
+
+        console.log(existingUser);
+
+        if (existingUser) {
+            res.status(400).json({ message: 'A user with that email address already exists.' });
+            return;
+        }
+        
+        // create new user
+        const newUser = await User.create({
+            name: req.body.name,
+            email: req.body.email,
+            password: req.body.password
+        });
+
+        req.session.save(() => {
+            req.session.user_id = newUser.id;
+            req.session.logged_in = true;
+
+            res.json({ user: newUser, message: 'Registration successful!' });
+        });
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 
