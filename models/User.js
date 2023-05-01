@@ -35,7 +35,18 @@ User.init({
             len: [8],
         },
     },
+     // Add the role_id foreign key
+    role_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'role',
+          key: 'id',
+        },
+        defaultValue: 2, // Set "User" role as the default role
+      },
 },
+
+
 {
     hooks: {
         beforeCreate: async (newUserData) => {
