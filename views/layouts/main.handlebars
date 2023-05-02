@@ -1,21 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fine Decor</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+​
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-</head>
+    <link rel="stylesheet" type="text/css" href="/public/css/styles.css ">
+  </head>
 
 <body>
+    <header class="card-panel red lighten-3">
+        <h1 class="grey-text text-lighten-5 center-align">Fine Decor</h1>
+    </header>
+
+      <nav>
+        <div class="nav-wrapper container">
+          {{#if loggedIn }}
+          <a class="brand-logo center-align">Logout</a>
+          {{else}}
+          <a href="/login" class="brand-logo center-align">Login</a>
+          {{/if}}
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/color">Color</a></li>
+            <li><a href="/category">Category</a></li>
+            <li><a href="/brand">Brand</a></li>
+            <li><a href="/material">Material</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+
   <main>
     {{{ body }}}
   </main>
-  <footer>
-      
+
+
+
+  <footer class="page-footer red lighten-3">
+    <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Fine Decor</h5>
+              <p class="grey-text text-lighten-4">We wanted to try and create a furniture store with a new way to shop for furniture, mainly being able to search for furniture in non traditional ways.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Meet the Team</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Amanda Edmond</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Justin Connors</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Matt Zhao</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Jiasi Li</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2023 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="https://github.com/AmyEdmond/Fine_Decor/tree/main/controllers">Github Links</a>
+          </div>
+    </div>
   </footer>
 
 
 </body>
 
 </html>
+
+{{#if loggedIn}}
+  <script scr="/js/logout.js"></script>
+{{/if}}
