@@ -1,8 +1,28 @@
-<form id="registration-form">
-  <input type="text" name="name" id="name" placeholder="Name" required>
-  <input type="email" name="email" id="email" placeholder="Email" required>
-  <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
-  <button type="submit">Register</button>
-</form>
+<div class="row">
+  <div class="col s12 m6 offset-m3">
+    <form id="registration-form" class="card">
+      <div class="card-content brown darken-1">
+        <span class="card-title white-text">Register</span>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" name="name" id="name" class="validate white-text" required>
+            <label for="name" class="white-text">Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="email" name="email" id="email" class="validate white-text" required>
+            <label for="email" class="white-text">Email</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="password" name="password" id="password" class="validate white-text" minlength="8" required>
+            <label for="password" class="white-text">Password</label>
+          </div>
+          <div class="col s12 center-align">
+            <button type="submit" class="btn red lighten-3 waves-effect waves-light white-text">Register</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <script src="/js/createAccount.js"></script>
