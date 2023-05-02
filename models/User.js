@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const Furniture = require('./Furniture');
 
 class User extends Model {
     checkPassword(loginPw) {
@@ -34,7 +35,18 @@ User.init({
             len: [8],
         },
     },
+     // Add the role_id foreign key
+    role_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'role',
+          key: 'id',
+        },
+        defaultValue: 2, // Set "User" role as the default role
+      },
 },
+
+
 {
     hooks: {
         beforeCreate: async (newUserData) => {
@@ -47,6 +59,10 @@ User.init({
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
+});
+
+User.hasMany(Furniture, {
+    foreignKey: 'user_id',
 });
 
 module.exports = User;
