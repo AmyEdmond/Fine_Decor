@@ -1,0 +1,41 @@
+<div  id="wood" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Material:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/material/wood" style="margin-top: 10px; display: block;">Wood</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                {{#each material.woods as |wood|}}
+                {{> wood-details}}
+                {{/each}}
+            </div>
+            
+        </div>
+    </div> 
+
+</div>
+
+<div  id="polyester" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Material:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/material/polyester" style="margin-top: 10px; display: block;">Polyester</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                {{#each material.polyesters as |polyester|}}
+                {{> polyester-details}}
+                {{/each}}
+            </div>
+            
+        </div>
+    </div> 
+
+</div>

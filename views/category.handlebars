@@ -1,0 +1,62 @@
+<div  id="bedroom" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Category:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/category/bedroom" style="margin-top: 10px; display: block;">Bedroom</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                {{#each category.bedrooms as |bedroom|}}
+                {{> bedroom-details}}
+                {{/each}}
+            </div>
+            
+        </div>
+    </div> 
+
+</div>
+
+<div  id="livingRoom" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Category:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/category/livingroom" style="margin-top: 10px; display: block;">Living room</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                {{#each category.livingrooms as |livingroom|}}
+                {{> livingroom-details}}
+                {{/each}}
+            </div>
+            
+        </div>
+    </div> 
+
+</div>
+
+<div  id="outdoor" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Category:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/category/outdoor" style="margin-top: 10px; display: block;">Outdoor</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            <div class="col s12 m6 l4">
+                {{#each category.outdoors as |outdoor|}}
+                {{> outdoor-details}}
+                {{/each}}
+            </div>
+            
+        </div>
+    </div> 
+
+</div>
