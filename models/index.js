@@ -10,7 +10,4 @@ Role.hasMany(User, {
   foreignKey: 'role_id',
 });
 
-module.exports = { User, Role };
-
-
 module.exports = { User, Role, Furniture };
