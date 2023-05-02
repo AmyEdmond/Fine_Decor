@@ -1,0 +1,21 @@
+:root {
+    --background: rgba(189, 109, 109, 1);
+    --light: #e3e4e3;
+    --dark: #182c23;
+    --grey: rgba(123, 111, 111, 1);
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+  
+  body {
+    background-color: #ef9a9a;
+  }
+  
+  nav {
+    background-color: #757575;
+    
+  }
+  
+  a {
+    border: #ef9a9a 10px;
+  }
