@@ -3,16 +3,18 @@
 
           <!-- side-bar -->
         <h4 class="grey-text text-lighten-5">Brand:</h4>
-        <a class="waves-effect waves-light brown darken-1 btn" href="/brand/castlery" style="margin-top: 10px; display: block;">CASTLERY</a>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/brand" style="margin-top: 10px; display: block;">CASTLERY</a>
     </div>
 
     <div class="col s12 m8 l10">
         <div class="row">
-            <div class="col s12 m6 l4">
-                {{#each brand.castlerys as |castlery|}}
-                {{> castlery-details}}
-                {{/each}}
-            </div>
+            {{#each furniture as |f|}}
+            {{#ifEquals f.brand "CASTLERY"}}
+                
+            {{> product-details f}}
+                
+            {{/ifEquals}}
+            {{/each}}
             
         </div>
     </div> 
@@ -24,16 +26,18 @@
 
           <!-- side-bar -->
         <h4 class="grey-text text-lighten-5">Brand:</h4>
-        <a class="waves-effect waves-light brown darken-1 btn" href="/brand/floyd" style="margin-top: 10px; display: block;">FLOYD</a>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/brand" style="margin-top: 10px; display: block;">FLOYD</a>
     </div>
 
     <div class="col s12 m8 l10">
         <div class="row">
-            <div class="col s12 m6 l4">
-                {{#each brand.floyds as |floyd|}}
-                {{> floyd-details}}
-                {{/each}}
-            </div>
+            {{#each furniture as |f|}}
+            {{#ifEquals f.brand "FLOYD"}}
+                
+            {{> product-details f}}
+                
+            {{/ifEquals}}
+            {{/each}}
             
         </div>
     </div> 

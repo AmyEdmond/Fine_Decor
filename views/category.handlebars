@@ -11,7 +11,7 @@
             {{#each furniture as |f|}}
             {{#ifEquals f.category "Bedroom"}}
                 
-            {{> brown-details f}}
+            {{> product-details f}}
                 
             {{/ifEquals}}
             {{/each}}
@@ -27,16 +27,18 @@
 
           <!-- side-bar -->
         <h4 class="grey-text text-lighten-5">Category:</h4>
-        <a class="waves-effect waves-light brown darken-1 btn" href="/category/livingroom" style="margin-top: 10px; display: block;">Living room</a>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/category" style="margin-top: 10px; display: block;">Living room</a>
     </div>
 
     <div class="col s12 m8 l10">
         <div class="row">
-            <div class="col s12 m6 l4">
-                {{#each category.livingrooms as |livingroom|}}
-                {{> livingroom-details}}
-                {{/each}}
-            </div>
+            {{#each furniture as |f|}}
+            {{#ifEquals f.category "Living Room"}}
+                
+            {{> product-details f}}
+                
+            {{/ifEquals}}
+            {{/each}}
             
         </div>
     </div> 
@@ -48,16 +50,18 @@
 
           <!-- side-bar -->
         <h4 class="grey-text text-lighten-5">Category:</h4>
-        <a class="waves-effect waves-light brown darken-1 btn" href="/category/outdoor" style="margin-top: 10px; display: block;">Outdoor</a>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/category" style="margin-top: 10px; display: block;">Outdoor</a>
     </div>
 
     <div class="col s12 m8 l10">
         <div class="row">
-            <div class="col s12 m6 l4">
-                {{#each category.outdoors as |outdoor|}}
-                {{> outdoor-details}}
-                {{/each}}
-            </div>
+            {{#each furniture as |f|}}
+            {{#ifEquals f.category "Outdoor"}}
+                
+            {{> product-details f}}
+                
+            {{/ifEquals}}
+            {{/each}}
             
         </div>
     </div> 
