@@ -2,9 +2,29 @@ const express = require('express');
 const router = express.Router();
 const sequelize = require('./connection'); // Import the Sequelize instance
 const { QueryTypes } = require('sequelize');
+const { User } = require('../models'); // Import the User model
+
+//to check if user is an admin
+const isAdmin = async (req, res, next) => {
+    if (req.userLoggedIn) {
+        try {
+            const user = await User.findOne({ where: { id: req.session.userId } });
+            if (user && user.role_id === 1) {
+                next();
+            } else {
+                res.status(403).json({ success: false, message: 'Access denied' });
+            }
+        } catch (err) {
+            console.error('Error checking user role:', err.stack);
+            res.status(500).json({ success: false, message: 'Error checking user role' });
+        }
+    } else {
+        res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+};
 
 // POST: Add a new furniture item
-router.post('/furniture', async function(req, res) {
+router.post('/furniture', isAdmin, async function(req, res) {
     const furnitureData = req.body;
 
     try {
