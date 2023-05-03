@@ -52,5 +52,67 @@
         "brand": "CASTLERY",
         "material": "Wood",
         "color": "Natural"
+    },
+    {
+        "name": "The Outdoor Table",
+        "description": "This outdoor dining table is perfect for gathering around for a couples-only moonlit dinner, Sunday brunch with friends, and everything in between.",
+        "price": 599.99,
+        "image": "https://cdn.shopify.com/s/files/1/0462/1706/8706/products/TableLifestyleCarouselMobile1.jpg?v=1670300746&width=2500",
+        "category": "Outdoor",
+        "brand": "FLOYD",
+        "material": "Polyester",
+        "color": "Oat"
+    },
+    {
+        "name": "The Outdoor Bench",
+        "description": "The Outdoor Bench is a multitasker that works harder than you do – doubling as a dining bench, a welcoming seat on your front porch, or a thought-provoking resting place in the garden.",
+        "price": 364.99,
+        "image": "https://cdn.shopify.com/s/files/1/0462/1706/8706/products/Bench_Default_White.0001-min.png?v=1618942277&width=2500",
+        "category": "Outdoor",
+        "brand": "FLOYD",
+        "material": "Polyester",
+        "color": "Oat"
+    },
+    {
+        "name": "The Outdoor Chair",
+        "description": "A chair never looked so good in the sun. Or the rain. Or even the snow.",
+        "price": 252.99,
+        "image": "https://cdn.shopify.com/s/files/1/0462/1706/8706/products/SingleChair_Default_White.0001-min.png?v=1618940530&width=2500",
+        "category": "Outdoor",
+        "brand": "FLOYD",
+        "material": "Polyester",
+        "color": "Oat"
+    },
+    {
+        "name": "The Table",
+        "description": "Pull up a chair, or six. The Table's dimensions make for comfortable group dining or a spacious work surface.",
+        "price": 487.99,
+        "image": "https://cdn.shopify.com/s/files/1/0462/1706/8706/products/Table_Default_Birch_-_Black.0001.png?v=1670001437&width=2500",
+        "category": "Outdoor",
+        "brand": "FLOYD",
+        "material": "Wood",
+        "color": "Natural"
+    },
+    {
+        "name": "The Modular Table",
+        "description": "Sleek plywood and a smooth chamfered edge perfectly complement the simple, geometric design of The Modular Table.",
+        "price": 222.99,
+        "image": "https://cdn.shopify.com/s/files/1/0462/1706/8706/products/ProductSelector3_b2e3814f-aa90-4627-8fc6-bdffba89d483.jpg?v=1670252747&width=2500",
+        "category": "Living Room",
+        "brand": "FLOYD",
+        "material": "Wood",
+        "color": "Natural"
+    },
+    {
+        "name": "The Bed Frame",
+        "description": "A modular bed frame system designed to evolve in both size & function. Featuring all-natural wood veneer and beautifully finished steel supports designed to last a lifetime.",
+        "price": 900.99,
+        "image": "https://cdn.shopify.com/s/files/1/0462/1706/8706/products/ProductSelector3_6afc8526-a495-46a3-8511-b3f02115fd49.jpg?v=1670968373&width=2500",
+        "category": "Bedroom",
+        "brand": "FLOYD",
+        "material": "Wood",
+        "color": "Natural"
     }
 ]
+
+
