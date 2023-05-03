@@ -43,41 +43,113 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.get('/brand', (req, res) => {
+router.get('/brand', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureBrand = await Furniture.findAll({
+                attributes: [
+                    'color',
+                    'name',
+                    'description',
+                    'price',
+                    'image',
+                    'category',
+                    'brand',
+                    'material',
+                ],
+            });
+            let furniture = furnitureBrand.map(furniture => furniture.get({ plain: true }));
+            res.render('brand', {furniture});
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('brand');
 });
 
-router.get('/color', (req, res) => {
+router.get('/color', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureColor = await Furniture.findAll({
+                attributes: [
+                    'color',
+                    'name',
+                    'description',
+                    'price',
+                    'image',
+                    'category',
+                    'brand',
+                    'material',
+                ],
+            });
+            let furniture = furnitureColor.map(furniture => furniture.get({ plain: true }));
+            res.render('color', {furniture});
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('color');
 });
 
-router.get('/category', (req, res) => {
+router.get('/category', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureCategory = await Furniture.findAll({
+                attributes: [
+                    'color',
+                    'name',
+                    'description',
+                    'price',
+                    'image',
+                    'category',
+                    'brand',
+                    'material',
+                ],
+            });
+            let furniture = furnitureCategory.map(furniture => furniture.get({ plain: true }));
+            res.render('category', {furniture});
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('category');
 });
 
 
-router.get('/material', (req, res) => {
+router.get('/material', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureMaterial = await Furniture.findAll({
+                attributes: [
+                    'color',
+                    'name',
+                    'description',
+                    'price',
+                    'image',
+                    'category',
+                    'brand',
+                    'material',
+                ],
+            });
+            let furniture = furnitureMaterial.map(furniture => furniture.get({ plain: true }));
+            res.render('material', {furniture});
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('material');
 });
 
 router.get('/brand/:id', async (req, res) => {
