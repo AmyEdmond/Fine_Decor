@@ -46,7 +46,9 @@ Main contributors are:
 ## Questions?
 
 - Here's my GitHub: [Amanda Edmond](https://github.com/AmyEdmond) <br>
-- Here's my Email: [e_amy0587@hotmail.com](mailto:e_amy0587@hotmail.com)
+- Here's my Email: [e_amy0587@hotmail.com](mailto:e_amy0587@hotmail.com) <br>
+<br>
+Or ask my teammates in [Credits](#credits)!
 
 ## License
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
