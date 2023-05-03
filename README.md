@@ -26,7 +26,7 @@ Download [MySQL](https://dev.mysql.com/downloads/installer/).
 
 ## Usage
 
-- WIP(Work in progress)
+To search for furniture in a more intuitive way allowing users to find exactly what they are looking for rather than searching endlessly for the correct color/style/material. We allow the user to sort/searchby these conditions ontop of the standard of bathroom/outdoor/bedroom ect ... Making it much easier to find exactly what you are looking for.
 
 ## Credits
 
@@ -46,7 +46,9 @@ Main contributors are:
 ## Questions?
 
 - Here's my GitHub: [Amanda Edmond](https://github.com/AmyEdmond) <br>
-- Here's my Email: [e_amy0587@hotmail.com](mailto:e_amy0587@hotmail.com)
+- Here's my Email: [e_amy0587@hotmail.com](mailto:e_amy0587@hotmail.com) <br>
+<br>
+Or ask my teammates in [Credits](#credits)!
 
 ## License
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
