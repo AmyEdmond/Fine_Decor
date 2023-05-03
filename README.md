@@ -2,7 +2,7 @@
 
 ## Description
 
-We wanted to try and create a furniture store with a new way to shop for furniture, mainly being able to search for furniture in non traditional ways. If you've ever searched for furniture before you'd know it can be difficult to find *exactly* what you want. What we were thinking was to add an option to filter by color and/or material to really get to what you want right away. Instead of the traditional way of going from outdoors -> tables -> checking all the table colors to find the right one. Instead you would just outdoors -> color/material making it much more intuitive to search.
+The goal was to create a furniture store with a new way to shop for furniture, mainly being able to search for furniture in a non-traditional way. If you've ever searched for furniture in the past, you'd know it can be difficult to find *exactly* what you are looking for.The idea behind this project was to add an option to filter by color and/or material to really get to what you want right away. Instead of the traditional way of going from outdoors -> tables -> checking all the table to find the right one. Instead you would just go to outdoors -> color/material making it much more intuitive to search.
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ Download [MySQL](https://dev.mysql.com/downloads/installer/).
 
 ## Usage
 
-To search for furniture in a more intuitive way allowing users to find exactly what they are looking for rather than searching endlessly for the correct color/style/material. We allow the user to sort/searchby these conditions ontop of the standard of bathroom/outdoor/bedroom ect ... Making it much easier to find exactly what you are looking for.
+To search for furniture in a more intuitive way allowing users to find exactly what they are looking for rather than searching endlessly for the correct color/style/material. We allow the user to sort/search by these conditions on top of the standard of bathroom/outdoor/bedroom ect ... Making it much easier to find exactly what you are looking for.
 
 ## Credits
 
