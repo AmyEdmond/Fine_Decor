@@ -118,25 +118,20 @@ router.get('/color/:id', async (req, res) => {
         return;
     } else {
         try {
-            const furnitureColor = await Furniture.findByPk(req.params.id, {
-                include: [
-                    {
-                        model: Furniture,
-                            attributes: [
-                            'color',
-                            'name',
-                            'description',
-                            'price',
-                            'image',
-                            'category',
-                            'brand',
-                            'material',
-                        ],
-                    },
+            const furnitureColor = await Furniture.findAll({
+                attributes: [
+                    'color',
+                    'name',
+                    'description',
+                    'price',
+                    'image',
+                    'category',
+                    'brand',
+                    'material',
                 ],
             });
-            let furniture = furnitureColor.get({ plain: true });
-            res.render('color', furniture);
+            let furniture = furnitureColor.map(furniture => furniture.get({ plain: true }));
+            res.render('color', {furniture});
         } catch (err) {
             console.error(err);
             res.status(500).json(err);
