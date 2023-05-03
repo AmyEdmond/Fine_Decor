@@ -43,43 +43,134 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.get('/brand', (req, res) => {
+router.get('/brand', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureBrand = await Furniture.findByPk(req.params.id, {
+                include: [
+                    {
+                        model: Furniture,
+                            attributes: [
+                            'color',
+                            'name',
+                            'description',
+                            'price',
+                            'image',
+                            'category',
+                            'brand',
+                            'material',
+                        ],
+                    },
+                ],
+            });
+            let furniture = furnitureBrand.get({ plain: true });
+            res.render('brand', furniture);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('brand');
 });
 
 router.get('/color', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureColor = await Furniture.findByPk(req.params.id, {
+                include: [
+                    {
+                        model: Furniture,
+                            attributes: [
+                            'color',
+                            'name',
+                            'description',
+                            'price',
+                            'image',
+                            'category',
+                            'brand',
+                            'material',
+                        ],
+                    },
+                ],
+            });
+            let furniture = furnitureColor.get({ plain: true });
+            res.render('color', furniture);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-    const furnColor = await Furniture.findByPk(req.params.id);
-    const furniture = furnColor.get({ plain: true });
 
-    res.render('color', furniture);
 });
 
-router.get('/category', (req, res) => {
+router.get('/category', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureCategory = await Furniture.findByPk(req.params.id, {
+                include: [
+                    {
+                        model: Furniture,
+                            attributes: [
+                            'color',
+                            'name',
+                            'description',
+                            'price',
+                            'image',
+                            'category',
+                            'brand',
+                            'material',
+                        ],
+                    },
+                ],
+            });
+            let furniture = furnitureCategory.get({ plain: true });
+            res.render('category', furniture);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('category');
 });
 
 
-router.get('/material', (req, res) => {
+router.get('/material', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
+    } else {
+        try {
+            const furnitureMaterial = await Furniture.findByPk(req.params.id, {
+                include: [
+                    {
+                        model: Furniture,
+                            attributes: [
+                            'color',
+                            'name',
+                            'description',
+                            'price',
+                            'image',
+                            'category',
+                            'brand',
+                            'material',
+                        ],
+                    },
+                ],
+            });
+            let furniture = furnitureMaterial.get({ plain: true });
+            res.render('category', furniture);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
-
-    res.render('material');
 });
 
 
