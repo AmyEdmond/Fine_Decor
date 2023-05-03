@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Furniture } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -22,6 +22,8 @@ router.get('/', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
@@ -50,13 +52,15 @@ router.get('/brand', (req, res) => {
     res.render('brand');
 });
 
-router.get('/color', (req, res) => {
+router.get('/color', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
     }
+    const furnColor = await Furniture.findByPk(req.params.id);
+    const furniture = furnColor.get({ plain: true });
 
-    res.render('color');
+    res.render('color', furniture);
 });
 
 router.get('/category', (req, res) => {
