@@ -1,0 +1,45 @@
+<div  id="wood" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Material:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/material" style="margin-top: 10px; display: block;">Wood</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            {{#each furniture as |f|}}
+            {{#ifEquals f.material "Wood"}}
+                
+            {{> product-details f}}
+                
+            {{/ifEquals}}
+            {{/each}}
+            
+        </div>
+    </div> 
+
+</div>
+
+<div  id="polyester" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Material:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/material" style="margin-top: 10px; display: block;">Polyester</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            {{#each furniture as |f|}}
+            {{#ifEquals f.material "Polyester"}}
+                
+            {{> product-details f}}
+                
+            {{/ifEquals}}
+            {{/each}}
+            
+        </div>
+    </div> 
+
+</div>

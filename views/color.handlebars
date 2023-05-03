@@ -1,0 +1,73 @@
+<div  id="Brown" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Color:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/color" style="margin-top: 10px; display: block;">Brown</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            
+                {{#each furniture as |f|}}
+                {{#ifEquals f.color "Brown"}}
+                
+                {{> product-details f}}
+                
+                {{/ifEquals}}
+                {{/each}}
+            
+            
+        </div>
+    </div> 
+
+</div>
+
+<div  id="Natural" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Color:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/color" style="margin-top: 10px; display: block;">Natural</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+            
+                {{#each furniture as |f|}}
+                {{#ifEquals f.color "Natural"}}
+                
+                {{> product-details f}}
+                
+                {{/ifEquals}}
+                {{/each}}
+            
+            
+        </div>
+    </div>  
+
+</div>
+
+<div  id="Oat" class="row card-panel red lighten-3">
+    <div class="col s12 m4 l2 center-align" id="side-bar">
+
+          <!-- side-bar -->
+        <h4 class="grey-text text-lighten-5">Color:</h4>
+        <a class="waves-effect waves-light brown darken-1 btn" href="/color" style="margin-top: 10px; display: block;">Oat</a>
+    </div>
+
+    <div class="col s12 m8 l10">
+        <div class="row">
+                {{#each furniture as |f|}}
+                {{#ifEquals f.color "Oat"}}
+                
+                {{> product-details f}}
+                
+                {{/ifEquals}}
+                {{/each}}
+            
+            
+        </div>
+    </div> 
+
+</div>

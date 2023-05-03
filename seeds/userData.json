@@ -2,7 +2,14 @@
     {
       "name": "Admin",
       "email": "admin@admin.com",
-      "password": "admin1234"
+      "password": "admin1234",
+      "role_id": 1 
+    },
+    {
+      "name": "user",
+      "email": "user@user.com",
+      "password": "user1234",
+      "role_id": 2
     }
 ]
   
