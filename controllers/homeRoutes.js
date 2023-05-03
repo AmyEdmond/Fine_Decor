@@ -41,4 +41,42 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
+router.get('/brand', (req, res) => {
+    if(!req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('brand');
+});
+
+router.get('/color', (req, res) => {
+    if(!req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('color');
+});
+
+router.get('/category', (req, res) => {
+    if(!req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('category');
+});
+
+
+router.get('/material', (req, res) => {
+    if(!req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('material');
+});
+
+
 module.exports = router;
