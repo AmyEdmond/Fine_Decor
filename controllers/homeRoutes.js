@@ -43,7 +43,7 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.get('/brand', async (req, res) => {
+router.get('/brand/:id', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
@@ -75,7 +75,7 @@ router.get('/brand', async (req, res) => {
     }
 });
 
-router.get('/color', async (req, res) => {
+router.get('/color/:id', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
@@ -108,7 +108,7 @@ router.get('/color', async (req, res) => {
 
 });
 
-router.get('/category', async (req, res) => {
+router.get('/category/:id', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
@@ -141,7 +141,7 @@ router.get('/category', async (req, res) => {
 });
 
 
-router.get('/material', async (req, res) => {
+router.get('/material/:id', async (req, res) => {
     if(!req.session.logged_in) {
         res.redirect('/');
         return;
