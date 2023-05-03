@@ -165,7 +165,7 @@ router.get('/material', async (req, res) => {
                 ],
             });
             let furniture = furnitureMaterial.get({ plain: true });
-            res.render('category', furniture);
+            res.render('material', furniture);
         } catch (err) {
             console.error(err);
             res.status(500).json(err);
