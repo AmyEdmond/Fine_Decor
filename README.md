@@ -1,48 +1,62 @@
-# Fine_Decor
-Project#2
-![License:MIT](http://img.shields.io/badge/license-MIT-blue.svg)
+# FineDecor
 
 ## Description
 
-The goal for this challenge was to create 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nisi faucibus, ultricies mauris a, blandit urna. Mauris eu tempus tortor. Proin suscipit tristique purus vel molestie. Integer erat dui, hendrerit vel odio et, hendrerit ornare leo. Donec a lectus et orci porta tristique. Suspendisse venenatis libero a risus dapibus porta. Aliquam et mauris magna. Duis gravida sapien et venenatis scelerisque. Donec rhoncus vitae augue vitae scelerisque. Fusce euismod malesuada magna, vel sagittis purus mollis a. Nulla in leo commodo, sodales elit at, tempor sem.
+We wanted to create a furniture store with a new way to shop for furniture, mainly being able to search for furniture in non traditional ways. If you've ever searched for furniture in the past, you'd know it can be difficult to find *exactly* what you are looking for.The idea behind this project was to add an option to filter by color and/or material to really get to what you want right away. Instead of the traditional way of going from outdoors -> tables -> checking all the table to find the right one. Instead you would just go to outdoors -> color/material making it much more intuitive to search.
+
 ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-* [Contributions](#contributions)
-* [Test](#tests)
-* [Questions](#questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [Features](#features)
+- [Questions](#questions)
+- [License](#license)
 
 ## Installation
 
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nisi faucibus, ultricies mauris a, blandit urna. Mauris eu tempus tortor. Proin suscipit tristique purus vel molestie. Integer erat dui, hendrerit vel odio et, hendrerit ornare leo. Donec a lectus et orci porta tristique. Suspendisse venenatis libero a risus dapibus porta. Aliquam et mauris magna. Duis gravida sapien et venenatis scelerisque. Donec rhoncus vitae augue vitae scelerisque. Fusce euismod malesuada magna, vel sagittis purus mollis a. Nulla in leo commodo, sodales elit at, tempor sem.
+If you want to contribute to this repo you will need NodeJS and MySQL. 
+- Download/Fork the project
+- In your terminal run ```mysql -u [your db user] -p``` 
+- Inside of MySQL run ```source db/schema.sql```
+- In a bash terminal run ```npm run seed``` to seed the db.
+- To start the server in a bash terminal run ```npm start```
+
+Download [NodeJS](https://nodejs.org/en/download).<br>
+Download [MySQL](https://dev.mysql.com/downloads/installer/).
 
 ## Usage
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nisi faucibus, ultricies mauris a, blandit urna. Mauris eu tempus tortor. Proin suscipit tristique purus vel molestie. Integer erat dui, hendrerit vel odio et, hendrerit ornare leo. Donec a lectus et orci porta tristique. Suspendisse venenatis libero a risus dapibus porta. Aliquam et mauris magna. Duis gravida sapien et venenatis scelerisque. Donec rhoncus vitae augue vitae scelerisque. Fusce euismod malesuada magna, vel sagittis purus mollis a. Nulla in leo commodo, sodales elit at, tempor sem.
-`add image link`
+To search for furniture in a more intuitive way allowing users to find exactly what they are looking for rather than searching endlessly for the correct color/style/material. We allow the user to sort/search by these conditions on top of the standard of bathroom/outdoor/bedroom ect ... Making it much easier to find exactly what you are looking for.
 
 ## Credits
 
-`add team members name`
+Main contributors are:
+- [Jiasi Li](https://github.com/Jiasisi)
+- [Amanda Edmond](https://github.com/AmyEdmond)
+- [Matt Zhao](https://github.com/unbmattzhao)
+- [Justin Connors](https://github.com/Justin-Connors)
+
+## Features
+
+- Search for furniture
+- Sort furniture
+- Add furniture to cart
+- User accounts/login
+
+## Questions?
+
+- Here's my GitHub: [Amanda Edmond](https://github.com/AmyEdmond) <br>
+- Here's my Email: [e_amy0587@hotmail.com](mailto:e_amy0587@hotmail.com) <br>
+<br>
+Or ask my teammates in [Credits](#credits)!
 
 ## License
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This project is license under: [MIT](https://lbesson.mit-license.org/)
+---
 
-## Contributions
-
-If you see something in this project that could be improved, you can do a feature request with updated code so I can review your changes.
-
-
-## Tests
-`add test description here`
-
-## Questions
-
-If you have any questions about this project, you can reach me at:
-* Github: 
-* Email: 
+## Initial Wireframe
+![Alt text](public/img/sgnin.png "Sign In")
+![Alt text](public/img/hmpg.png "Home Page")
+![Alt text](public/img/sort.png "Sort")
