@@ -9,8 +9,9 @@ We wanted to try and create a furniture store with a new way to shop for furnitu
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
 - [Features](#features)
+- [Questions](#questions)
+- [License](#license)
 
 ## Installation
 
