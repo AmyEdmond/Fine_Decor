@@ -23,7 +23,32 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-
+router.get('/product/:id', async (req, res) => {
+    if(!req.session.logged_in) {
+        res.redirect('/');
+        return;
+    } else {
+        try {
+            const furnitureId = await Furniture.findByPk(req.params.id, {
+                attributes: [
+                    'color',
+                    'name',
+                    'description',
+                    'price',
+                    'image',
+                    'category',
+                    'brand',
+                    'material',
+                ],
+            });
+            let furniture = furnitureId.get({ plain: true });
+            res.render('product', {furniture});
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
+    }
+});
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
@@ -51,6 +76,7 @@ router.get('/brand', async (req, res) => {
         try {
             const furnitureBrand = await Furniture.findAll({
                 attributes: [
+                    'id',
                     'color',
                     'name',
                     'description',
@@ -78,6 +104,7 @@ router.get('/color', async (req, res) => {
         try {
             const furnitureColor = await Furniture.findAll({
                 attributes: [
+                    'id',
                     'color',
                     'name',
                     'description',
@@ -105,6 +132,7 @@ router.get('/category', async (req, res) => {
         try {
             const furnitureCategory = await Furniture.findAll({
                 attributes: [
+                    'id',
                     'color',
                     'name',
                     'description',
@@ -133,6 +161,7 @@ router.get('/material', async (req, res) => {
         try {
             const furnitureMaterial = await Furniture.findAll({
                 attributes: [
+                    'id',
                     'color',
                     'name',
                     'description',
